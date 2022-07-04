@@ -1,0 +1,36 @@
+.alert {
+  color: #ff6780;
+  margin-bottom: 0px;
+}
+
+ .navbar {
+  border-bottom: ridge;
+  border-top: ridge;
+  border-width: 1px;
+  border-color: #ff6780;
+}
+
+.navbar-light .nav-link {
+  color: #ff6780;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.navbar-light .nav-link:hover {
+  color: grey;
+}
+
+.btn {
+  background-color: #ff6780;
+  color: #ffffff;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100px;
+}
+
+.btn:hover {
+  color: #ff6780;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #ff6780;
+}
