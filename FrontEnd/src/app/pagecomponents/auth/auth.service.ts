@@ -29,6 +29,11 @@ export class AuthService {
           email: email,
           age: age
       }
+      ).pipe(tap(res => {
+        const user = new User(res.token);
+        this.user.next(user);
+        localStorage.setItem('userData', JSON.stringify(user));
+      })
       );
   }
 

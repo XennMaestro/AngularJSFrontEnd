@@ -11,10 +11,12 @@ import { FooterComponent } from './pagecomponents/footer/footer.component';
 import { LoginComponent } from './pagecomponents/login/login.component';
 import { AuthService } from './pagecomponents/auth/auth.service'
 import { AuthGuard } from './pagecomponents/auth/auth.guard';
+import { RegisterComponent } from './pagecomponents/register/register.component';
 
 const appRoutes: Routes = [
   { path: '', component: BodyComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent},
   { path: 'search', canActivate: [AuthGuard], component: LoginComponent }
 ];
 
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

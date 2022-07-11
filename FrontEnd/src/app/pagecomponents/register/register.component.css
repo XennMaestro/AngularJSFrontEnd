@@ -1,0 +1,19 @@
+.header {
+  color: #012169;
+}
+
+.botmargin {
+  margin-bottom: 350px;
+}
+
+.help-block {
+  color: #ff0000;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid #ff0000;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}

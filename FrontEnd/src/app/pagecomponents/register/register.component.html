@@ -1,0 +1,97 @@
+<br>
+<br>
+
+<div class = "container botmargin">
+  <span
+  *ngIf="error"
+  class="help-block"> {{error}}
+  <br>
+  <br>
+  </span>
+  <h1 class="header">Welcome</h1>
+  <form #ngForm="ngForm" [formGroup]="signupForm" (ngSubmit)="onSubmit(ngForm)">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text"
+      id="email"
+      formControlName="email"
+      class="form-control">
+      <span
+      *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
+      class="help-block">Please enter email</span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password"
+      id="password"
+      formControlName="password"
+      class="form-control">
+      <span
+      *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
+      class="help-block">Please enter password
+      <br>
+    </span>
+    </div>
+    <div class="form-group">
+      <label for="comfirmPassword">Confirm Password:</label>
+      <input type="password"
+      id="comfirmPassword"
+      formControlName="comfirmPassword"
+      class="form-control">
+      <span
+      *ngIf="!signupForm.get('comfirmPassword').valid && signupForm.get('comfirmPassword').touched"
+      class="help-block">Please enter confirmation password
+      <br>
+    </span>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text"
+      id="firstName"
+      formControlName="firstName"
+      class="form-control">
+      <span
+      *ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched"
+      class="help-block">Please enter first name
+      <br>
+    </span>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text"
+      id="lastName"
+      formControlName="lastName"
+      class="form-control">
+      <span
+      *ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched"
+      class="help-block">Please enter last name
+      <br>
+    </span>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number"
+       id="age"
+       min="1" max="100"
+       formControlName="age"
+       class="form-control">
+      <span
+      *ngIf="!signupForm.get('age').valid && signupForm.get('age').touched"
+      class="help-block">Please enter age
+      <br>
+    </span>
+    </div>
+    <span
+      *ngIf="!signupForm.valid && signupForm.touched"
+      class="help-block">Please enter valid data
+    <br>
+    <br>
+    </span>
+    <button
+    [disabled]="!signupForm.valid"
+    class="btn btn-primary"
+    type="submit">
+    Register
+    </button>
+  </form>
+</div>
